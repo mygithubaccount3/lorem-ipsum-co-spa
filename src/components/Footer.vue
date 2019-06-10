@@ -1,0 +1,50 @@
+<template>
+    <footer>
+        <div class="footer-wrapper">
+            <p class="footer-wrapper__contact">mail@mailtest.com +30-6977664062</p>
+            <p class="footer-wrapper__copyright">Copyright © 2019 Test All Rights Reserved.</p>
+        </div>
+    </footer>
+</template>
+<style lang="scss" scoped>
+    @import "../scss/utils/utilities/variables";
+    @import '../scss/utils/mixins/_mixins.scss';
+
+    footer {
+        background-color: #1d1e25;
+        padding-bottom: 3px;
+
+        .footer-wrapper {
+            border-top: 1px solid rgba(74, 77, 94, 0.3);
+            display: flex;
+            justify-content: space-between;
+            margin: -1px auto auto;
+            width: 92.5%;
+
+            &__contact {
+                color: #ffffff;
+                font-family: "Sofia Pro Regular", sans-serif;
+                font-size: rem(16);
+                font-weight: 400;
+                line-height: 30px;
+                margin-top: 23px;
+                width: 143px;
+            }
+
+            &__copyright {
+                color: #4a4d5e;
+                font-family: "Sofia Pro Regular", sans-serif;
+                font-size: rem(13);
+                font-weight: 400;
+                line-height: 26px;
+                margin-top: 40px;
+                width: 249px;
+
+                @include respond-to(smallScreen) {
+                    margin-top: 23px;
+                    width: 131px;
+                }
+            }
+        }
+    }
+</style>
