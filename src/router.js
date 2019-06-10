@@ -3,7 +3,7 @@ import Greeting from 'greeting'
 import Comment from 'comment'
 import CommentForm from 'commentForm'
 
-export default new VueRouter({
+const router = new VueRouter({
     routes: [
         {
             path: '/',
@@ -26,4 +26,6 @@ export default new VueRouter({
             component: CommentForm
         }
     ]
-})
+});
+
+export default router

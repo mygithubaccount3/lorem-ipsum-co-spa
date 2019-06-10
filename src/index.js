@@ -12,8 +12,10 @@ import router from './router'
 import store from './store'
 import Greeting from 'greeting'
 
-export default new Vue({
+const vm = new Vue({
     store,
     router: router,
     render: h => h(App)
 }).$mount("#app");
+
+export default vm

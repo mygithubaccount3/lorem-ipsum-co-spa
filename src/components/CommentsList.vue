@@ -9,10 +9,10 @@
 
 <script>
     import CommentsListItem from 'commentsListItem'
-    import { store } from '../store'
     export default {
         components: {CommentsListItem},
         mounted() {
+            const component = this;
             let settings = {
                 "url": "https://5cbef81d06a6810014c66193.mockapi.io/api/comments",
                 "method": "GET",
@@ -31,9 +31,9 @@
                         $("<p class='comments-list__conclusion' style='text-align: center'>Nothing to show</p>").insertAfter(".grid");
                     }
                     else{
-                        store.commit('add', response);
+                        component.$store.commit('add', response);
                         let componentsToRender = '<div class="comments-list__list grid">';
-                        store.state[1].forEach((e, i, a) => {
+                        component.$store.state[0].forEach((e, i, a) => {
                             componentsToRender += `<CommentsListItem title='${e.title}' body='${e.body}' id='${e.id}'></CommentsListItem>`;
                         });
 

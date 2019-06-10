@@ -1,8 +1,8 @@
-export const store = new Vuex.Store({
+const store = new Vuex.Store({
     state: [],
     mutations: {
         add (state, payload) {
-            state.push(payload)
+            state.length > 1 ? state.pop() : state.push(payload)
         },
         update (state, payload) {
             state[0] = {title: payload.title, comment: payload.comment}
@@ -10,4 +10,4 @@ export const store = new Vuex.Store({
     }
 });
 
-store.commit('add', {title: sessionStorage.title, comment: sessionStorage.comment});
+export default store;

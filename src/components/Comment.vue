@@ -20,7 +20,7 @@
 </template>
 
 <script>
-    import { store } from '../store'
+    import store  from '../store'
     import vue from '../index'
     export default {
         data: function () {
@@ -79,7 +79,7 @@
                         }
                     }).done(function () {
                     setTimeout(() => {
-                        window.location.href = 'comments-list.html'
+                        vue._router.push({name:'List'})
                     }, 3000);
                 });
             },
