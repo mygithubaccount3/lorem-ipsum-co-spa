@@ -9,7 +9,9 @@ const store = new Vuex.Store({
             state.list.push(payload)
         },
         update (state, payload) {
-            state.list = {title: payload.title, comment: payload.comment}
+            const index = state.list[0].findIndex(item => item.id === payload.id);
+            state.list[0][index].body = payload.body;
+            state.list[0][index].title = payload.title;
         },
         changeComponent(state, payload) {
             state.component = payload

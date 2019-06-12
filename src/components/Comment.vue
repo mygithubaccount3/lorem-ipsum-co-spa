@@ -58,7 +58,7 @@
                             $(e.target).prev().removeAttr('disabled');
                             sessionStorage.title = $(e.target).parent().next().text();
                             sessionStorage.comment = $(e.target).parent().nextAll('.comment__text').text();
-                            store.commit('update', {title: sessionStorage.title, comment: sessionStorage.comment});
+                            store.commit('update', {title: sessionStorage.title, body: sessionStorage.comment, id: sessionStorage.id});
                         }
                     })
             },
