@@ -14,7 +14,8 @@ const store = new Vuex.Store({
             state.list[0][index].title = payload.title;
         },
         changeComponent(state, payload) {
-            state.component = payload
+            state.component = payload;
+            window.scrollTo(0, 0);
         }
     }
 });
