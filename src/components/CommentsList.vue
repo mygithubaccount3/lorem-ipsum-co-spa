@@ -34,7 +34,7 @@
                     else{
                         component.$store.commit('add', response);
                         let componentsToRender = '<div class="comments-list__list grid">';
-                        component.$store.state.list.forEach((e, i, a) => {
+                        component.$store.state.list[0].forEach((e, i, a) => {
                             componentsToRender += `<CommentsListItem title='${e.title}' body='${e.body}' id='${e.id}'></CommentsListItem>`;
                         });
 
