@@ -3,12 +3,13 @@
         <h1 class="comments-list__title">Comments</h1>
         <div class="comments-list__list grid"></div>
         <p class="comment__conclusion">Lorem Ipsum is text of the typesetting industry</p>
-        <a href="index.html" class="hvr-icon-back"><i class="fa fa-arrow-left hvr-icon" aria-hidden="true"></i>Back to Homepage</a>
+        <a class="hvr-icon-back" @click="go('Greeting')"><i class="fa fa-arrow-left hvr-icon" aria-hidden="true"></i>Back to Homepage</a>
     </main>
 </template>
 
 <script>
     import CommentsListItem from 'commentsListItem'
+
     export default {
         components: {CommentsListItem},
         mounted() {
@@ -33,7 +34,7 @@
                     else{
                         component.$store.commit('add', response);
                         let componentsToRender = '<div class="comments-list__list grid">';
-                        component.$store.state[0].forEach((e, i, a) => {
+                        component.$store.state.list.forEach((e, i, a) => {
                             componentsToRender += `<CommentsListItem title='${e.title}' body='${e.body}' id='${e.id}'></CommentsListItem>`;
                         });
 
@@ -53,9 +54,11 @@
                     });
                 });
             });
+        },
+        go(component) {
+            this.$store.commit('changeComponent', component);
         }
     }
-
 </script>
 
 <style lang="scss">
@@ -140,8 +143,6 @@
             }
         }
     }
-
-
 
     @keyframes rotate {
         0% {

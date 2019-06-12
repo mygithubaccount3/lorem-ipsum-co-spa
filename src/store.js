@@ -1,11 +1,18 @@
 const store = new Vuex.Store({
-    state: [],
+    state: {
+        component: 'Greeting',
+        list: []
+    },
     mutations: {
         add (state, payload) {
-            state.length > 1 ? state.pop() : state.push(payload)
+            if(state.list.length) state.list = [];
+            state.list.push(payload)
         },
         update (state, payload) {
-            state[0] = {title: payload.title, comment: payload.comment}
+            state.list = {title: payload.title, comment: payload.comment}
+        },
+        changeComponent(state, payload) {
+            state.component = payload
         }
     }
 });

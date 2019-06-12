@@ -1,6 +1,6 @@
 <template>
     <main class="comment">
-        <a href='' class='comment__link hvr-icon-back' @click.prevent="get">
+        <a class='comment__link hvr-icon-back' @click.preventDefault="go('CommentsList')">
             <i class='fa fa-arrow-left hvr-icon' aria-hidden='true'></i>
             Back to Comments
         </a>
@@ -12,7 +12,7 @@
         <h1 class='comment__title'>{{ title }}</h1>
         <p class='comment__text'>{{ text }}</p>
         <p class='comment__conclusion'>Lorem Ipsum is text of the typesetting industry</p>
-        <a href='index.html' class='comment__link hvr-icon-back'>
+        <a class='comment__link hvr-icon-back' @click.preventDefault="go('Greeting')">
             <i class='fa fa-arrow-left hvr-icon' aria-hidden='true'></i>
             Back to Homepage
         </a>
@@ -21,7 +21,7 @@
 
 <script>
     import store  from '../store'
-    import vue from '../index'
+
     export default {
         data: function () {
             return {
@@ -79,12 +79,12 @@
                         }
                     }).done(function () {
                     setTimeout(() => {
-                        vue._router.push({name:'List'})
+                        store.commit('changeComponent', 'CommentsList')
                     }, 3000);
                 });
             },
-            get() {
-                vue._router.push({name:'List'})
+            go(component) {
+                store.commit('changeComponent', component);
             }
         }
     }

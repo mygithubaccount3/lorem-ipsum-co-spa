@@ -25,7 +25,6 @@ module.exports = {
       commentForm: path.resolve(__dirname, '../src/components/CommentForm.vue'),
       commentsList: path.resolve(__dirname, '../src/components/CommentsList.vue'),
       commentsListItem: path.resolve(__dirname, '../src/components/CommentsListItem.vue'),
-      header: path.resolve(__dirname, '../src/components/Header.vue'),
       footer: path.resolve(__dirname, '../src/components/Footer.vue'),
     }
   },

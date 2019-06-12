@@ -2,7 +2,7 @@
     <section class="comment-form" id="comment-form">
         <p v-if="errors.length">
             <b>Please correct next error:</b>
-        <!--<ul>
+        <!--v-show<ul>
             <li v-for="error in errors">{{ error }}</li>
         </ul>-->
         </p>

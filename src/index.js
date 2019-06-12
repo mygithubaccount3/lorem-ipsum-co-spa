@@ -8,13 +8,10 @@ import './css/bob.css'
 import './css/bounce-in.css'
 
 import App from './App.vue'
-import router from './router'
 import store from './store'
-import Greeting from 'greeting'
 
 const vm = new Vue({
     store,
-    router: router,
     render: h => h(App)
 }).$mount("#app");
 

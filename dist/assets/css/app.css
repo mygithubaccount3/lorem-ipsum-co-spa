@@ -11,49 +11,6 @@
   font-family: "Sofia Pro Bold";
   src: url("/lorem-ipsum-co-spa/dist/assets/fonts/SofiaProBold.woff") format("woff"); }
 
-.navbar[data-v-61dd7a3d] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding-top: 44px;
-  padding-right: 40px;
-  padding-left: 50px;
-}
-.navbar-collapse[data-v-61dd7a3d] {
-    -webkit-box-flex: 0;
-        -ms-flex-positive: 0;
-            flex-grow: 0;
-}
-.nav-item[data-v-61dd7a3d] {
-  color: #111518;
-  font-family: "Sofia Pro", sans-serif;
-  font-size: 0.875rem;
-  font-weight: 500;
-  letter-spacing: 0.98px;
-  line-height: 21px;
-  margin-right: 20px;
-  padding-top: 5px;
-  text-transform: uppercase;
-}
-@media screen and (max-width: 991px) {
-.nav-item[data-v-61dd7a3d] {
-      margin: auto;
-      text-align: center;
-      width: 140px;
-}
-}
-.nav-item[data-v-61dd7a3d]:last-child {
-    margin-right: 0;
-}
-@media screen and (max-width: 991px) {
-.nav-item[data-v-61dd7a3d]:last-child {
-        margin: auto;
-}
-}
-
 footer[data-v-40ab164b] {
   background-color: #1d1e25;
   padding-bottom: 3px;
@@ -436,131 +393,6 @@ footer .footer-wrapper__copyright[data-v-40ab164b] {
 }
 }
 
-.greeting[data-v-17cc482e] {
-  padding-top: 55px;
-  padding-bottom: 55px;
-}
-@media (max-width: 767px) {
-.greeting[data-v-17cc482e] {
-      padding-top: 30px;
-      padding-bottom: 30px;
-}
-}
-.greeting__title[data-v-17cc482e] {
-    color: #111518;
-    font-family: "Sofia Pro Regular", sans-serif;
-    font-size: 4.375rem;
-    font-weight: 400;
-    letter-spacing: 0.1px;
-    line-height: 72px;
-    margin-bottom: 84px;
-    margin-left: 179px;
-    width: 63%;
-}
-@media (max-width: 767px) {
-.greeting__title[data-v-17cc482e] {
-        font-size: 1.5rem;
-        line-height: 36px;
-        margin: auto auto 38px;
-}
-}
-@media (min-device-width: 767px) and (max-device-width: 1024px) {
-.greeting__title[data-v-17cc482e] {
-        margin-right: auto;
-        margin-left: auto;
-        width: 80%;
-}
-}
-.greeting > img[data-v-17cc482e] {
-    height: auto;
-    width: 100%;
-}
-.about-us[data-v-17cc482e] {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: auto;
-  padding-top: 110px;
-  width: 73.5%;
-}
-@media (max-width: 767px) {
-.about-us[data-v-17cc482e] {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      padding-top: 0;
-}
-}
-@media (min-device-width: 767px) and (max-device-width: 1024px) {
-.about-us[data-v-17cc482e] {
-      width: 80%;
-}
-}
-.about-us__item[data-v-17cc482e] {
-    display: inline-block;
-    width: 26%;
-}
-@media (max-width: 767px) {
-.about-us__item[data-v-17cc482e] {
-        margin: auto;
-        padding-top: 40px;
-        width: 90%;
-}
-}
-.about-us__item[data-v-17cc482e]:first-child {
-      padding-top: 4px;
-}
-@media (max-width: 767px) {
-.about-us__item[data-v-17cc482e]:first-child {
-          padding-top: 40px;
-}
-}
-.about-us__item > h2[data-v-17cc482e] {
-      color: #101417;
-      font-family: "Sofia Pro Bold", sans-serif;
-      font-size: 2.25rem;
-      font-weight: 700;
-      line-height: 80px;
-      margin-bottom: 6px;
-}
-@media (min-device-width: 767px) and (max-device-width: 1024px) {
-.about-us__item > h2[data-v-17cc482e] {
-          line-height: 1.3;
-}
-}
-.about-us__item:nth-child(3) > h2[data-v-17cc482e] {
-      margin-top: 2px;
-}
-.about-us__item:nth-child(3) > ul > li[data-v-17cc482e] {
-      margin-bottom: 10px;
-}
-.about-us__item:nth-child(3) > ul > li[data-v-17cc482e]:first-child {
-        margin-bottom: 16px;
-}
-.about-us__item > ul[data-v-17cc482e] {
-      padding-left: 1px;
-}
-.about-us__item > ul > li[data-v-17cc482e] {
-        color: #101417;
-        font-family: "Sofia Pro Regular", sans-serif;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 20px;
-        list-style-type: none;
-        margin-bottom: 16px;
-}
-.about-us__item > ul > li[data-v-17cc482e]:last-child {
-          margin-bottom: 0;
-}
-.about-us__item > ul > li[data-v-17cc482e]::before {
-          content: "\2022";
-          margin-right: 5px;
-}
-
 .comment-form[data-v-7a92cc43] {
   background-color: #1d1e25;
   padding-top: 130px;
@@ -718,6 +550,195 @@ form .btn[data-v-7a92cc43] {
 @media (max-width: 767px) {
 form .btn[data-v-7a92cc43] {
         width: 100px;
+}
+}
+
+.greeting[data-v-17cc482e] {
+  padding-top: 55px;
+  padding-bottom: 55px;
+}
+@media (max-width: 767px) {
+.greeting[data-v-17cc482e] {
+      padding-top: 30px;
+      padding-bottom: 30px;
+}
+}
+.greeting__title[data-v-17cc482e] {
+    color: #111518;
+    font-family: "Sofia Pro Regular", sans-serif;
+    font-size: 4.375rem;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 72px;
+    margin-bottom: 84px;
+    margin-left: 179px;
+    width: 63%;
+}
+@media (max-width: 767px) {
+.greeting__title[data-v-17cc482e] {
+        font-size: 1.5rem;
+        line-height: 36px;
+        margin: auto auto 38px;
+}
+}
+@media (min-device-width: 767px) and (max-device-width: 1024px) {
+.greeting__title[data-v-17cc482e] {
+        margin-right: auto;
+        margin-left: auto;
+        width: 80%;
+}
+}
+.greeting > img[data-v-17cc482e] {
+    height: auto;
+    width: 100%;
+}
+.about-us[data-v-17cc482e] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: auto;
+  padding-top: 110px;
+  width: 73.5%;
+}
+@media (max-width: 767px) {
+.about-us[data-v-17cc482e] {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      padding-top: 0;
+}
+}
+@media (min-device-width: 767px) and (max-device-width: 1024px) {
+.about-us[data-v-17cc482e] {
+      width: 80%;
+}
+}
+.about-us__item[data-v-17cc482e] {
+    display: inline-block;
+    width: 26%;
+}
+@media (max-width: 767px) {
+.about-us__item[data-v-17cc482e] {
+        margin: auto;
+        padding-top: 40px;
+        width: 90%;
+}
+}
+.about-us__item[data-v-17cc482e]:first-child {
+      padding-top: 4px;
+}
+@media (max-width: 767px) {
+.about-us__item[data-v-17cc482e]:first-child {
+          padding-top: 40px;
+}
+}
+.about-us__item > h2[data-v-17cc482e] {
+      color: #101417;
+      font-family: "Sofia Pro Bold", sans-serif;
+      font-size: 2.25rem;
+      font-weight: 700;
+      line-height: 80px;
+      margin-bottom: 6px;
+}
+@media (min-device-width: 767px) and (max-device-width: 1024px) {
+.about-us__item > h2[data-v-17cc482e] {
+          line-height: 1.3;
+}
+}
+.about-us__item:nth-child(3) > h2[data-v-17cc482e] {
+      margin-top: 2px;
+}
+.about-us__item:nth-child(3) > ul > li[data-v-17cc482e] {
+      margin-bottom: 10px;
+}
+.about-us__item:nth-child(3) > ul > li[data-v-17cc482e]:first-child {
+        margin-bottom: 16px;
+}
+.about-us__item > ul[data-v-17cc482e] {
+      padding-left: 1px;
+}
+.about-us__item > ul > li[data-v-17cc482e] {
+        color: #101417;
+        font-family: "Sofia Pro Regular", sans-serif;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 20px;
+        list-style-type: none;
+        margin-bottom: 16px;
+}
+.about-us__item > ul > li[data-v-17cc482e]:last-child {
+          margin-bottom: 0;
+}
+.about-us__item > ul > li[data-v-17cc482e]::before {
+          content: "\2022";
+          margin-right: 5px;
+}
+
+.fade-enter {
+  opacity: 0;
+}
+.fade-enter-to {
+  opacity: 1;
+}
+.fade-leave {
+  opacity: 0;
+}
+.fade-leave-to {
+  opacity: 1;
+}
+.fade-enter-active, .fade-leave-active {
+  -webkit-transition: all 750ms ease-in-out;
+  -o-transition: all 750ms ease-in-out;
+  transition: all 750ms ease-in-out;
+}
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 44px;
+  padding-right: 40px;
+  padding-left: 50px;
+}
+.navbar-collapse {
+    -webkit-box-flex: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+}
+.navbar-brand {
+    cursor: pointer;
+}
+.nav-item {
+  color: #111518;
+  cursor: pointer;
+  font-family: "Sofia Pro", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.98px;
+  line-height: 21px;
+  margin-right: 20px;
+  padding-top: 5px;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 991px) {
+.nav-item {
+      margin: auto;
+      text-align: center;
+      width: 140px;
+}
+}
+.nav-item:last-child {
+    margin-right: 0;
+}
+@media screen and (max-width: 991px) {
+.nav-item:last-child {
+        margin: auto;
 }
 }
 

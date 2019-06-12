@@ -2,18 +2,19 @@
     <div class='grid-item hvr-bounce-in'>
         <p class='item-title'>{{ title }}</p>
         <p class='item-comment'>{{ body }}</p>
-        <a href='' class='item-link hvr-glow' @click.prevent='get'>Read more</a>
+        <a class='item-link hvr-glow' @click.preventDefault='get'>Read more</a>
         <span style='display:none'>{{ id }}</span>
     </div>
 </template>
 
 <script>
-    import vue from '../index'
+    import store from '../store'
+
     export default {
         props: ['title', 'body', 'id'],
         methods: {
             get(e) {
-                vue._router.push({name:'Comment'});
+                store.commit('changeComponent', 'Comment');
                 if (typeof(Storage) !== "undefined") {
                     sessionStorage.title = $(e.target).prev().prev().text();
                     sessionStorage.comment = $(e.target).prev().text();
