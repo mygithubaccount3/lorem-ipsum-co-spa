@@ -14,7 +14,7 @@
                 </div>
             </nav>
         </header>
-        <transition name="fade" appear>
+        <transition name="flip" mode="out-in" appear>
             <component :is="component"></component>
         </transition>
         <Footer></Footer>
@@ -52,24 +52,12 @@
     @import "./scss/utils/utilities/variables";
     @import './scss/utils/mixins/_mixins.scss';
 
-    .fade-enter {
-        opacity: 0;
+    .flip-enter, .flip-leave-to {
+        transform: rotateY(90deg);
     }
 
-    .fade-enter-to {
-        opacity: 1;
-    }
-
-    .fade-leave {
-        opacity: 0;
-    }
-
-    .fade-leave-to {
-        opacity: 1;
-    }
-
-    .fade-enter-active, .fade-leave-active {
-        transition: all 750ms ease-in-out;
+    .flip-enter-active, .flip-leave-active {
+        transition: transform 0.3s ease-out;
     }
 
     .navbar {

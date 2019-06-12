@@ -678,22 +678,16 @@ form .btn[data-v-7a92cc43] {
           margin-right: 5px;
 }
 
-.fade-enter {
-  opacity: 0;
+.flip-enter, .flip-leave-to {
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
 }
-.fade-enter-to {
-  opacity: 1;
-}
-.fade-leave {
-  opacity: 0;
-}
-.fade-leave-to {
-  opacity: 1;
-}
-.fade-enter-active, .fade-leave-active {
-  -webkit-transition: all 750ms ease-in-out;
-  -o-transition: all 750ms ease-in-out;
-  transition: all 750ms ease-in-out;
+.flip-enter-active, .flip-leave-active {
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+  transition: -webkit-transform 0.3s ease-out;
+  -o-transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out;
+  transition: transform 0.3s ease-out, -webkit-transform 0.3s ease-out;
 }
 .navbar {
   display: -webkit-box;
