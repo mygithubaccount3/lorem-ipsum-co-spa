@@ -9,8 +9,8 @@
             <button class='comment__edit' @click.preventDefault='edit'></button>
             <button class='comment__save' disabled @click.preventDefault='save'></button>
         </div>
-        <h1 class='comment__title'>{{ title }}</h1>
-        <p class='comment__text'>{{ text }}</p>
+        <h1 class='comment__title'>{{ comment.title }}</h1>
+        <p class='comment__text'>{{ comment.text }}</p>
         <p class='comment__conclusion'>Lorem Ipsum is text of the typesetting industry</p>
         <a class='comment__link hvr-icon-back' @click.preventDefault="go('Greeting')">
             <i class='fa fa-arrow-left hvr-icon' aria-hidden='true'></i>
@@ -23,12 +23,7 @@
     import store  from '../store'
 
     export default {
-        data: function () {
-            return {
-                title: sessionStorage.title,
-                text: sessionStorage.comment
-            }
-        },
+        computed: Vuex.mapState({comment: state => state.comment}),
         methods: {
             edit(e) {
                 $(e.target).parent().nextAll('.comment__title, .comment__text').attr('contenteditable', true).css('box-shadow', 'inset 0px 0px 5px 0px #60e3a1');
@@ -36,7 +31,8 @@
                 $(e.target).next().removeAttr('disabled');
             },
             save(e) {
-                $.ajax("https://5cbef81d06a6810014c66193.mockapi.io/api/comments/" + sessionStorage.id,
+                const component = this;
+                $.ajax("https://5cbef81d06a6810014c66193.mockapi.io/api/comments/" + component.comment.id,
                     {
                         "method": "PUT",
                         "timeout": 0,
@@ -56,14 +52,15 @@
                             $('.comments-list__loader').remove();
                             $(e.target).attr('disabled', true);
                             $(e.target).prev().removeAttr('disabled');
-                            sessionStorage.title = $(e.target).parent().next().text();
-                            sessionStorage.comment = $(e.target).parent().nextAll('.comment__text').text();
-                            store.commit('update', {title: sessionStorage.title, body: sessionStorage.comment, id: sessionStorage.id});
+                            store.commit('update', {title: $(e.target).parent().next().text(),
+                                                    body: $(e.target).parent().nextAll('.comment__text').text(),
+                                                    id: component.comment.id});
                         }
                     })
             },
             remove() {
-                $.ajax("https://5cbef81d06a6810014c66193.mockapi.io/api/comments/" + sessionStorage.id,
+                const component = this;
+                $.ajax("https://5cbef81d06a6810014c66193.mockapi.io/api/comments/" + component.comment.id,
                     {
                         "method": "DELETE",
                         "timeout": 0,

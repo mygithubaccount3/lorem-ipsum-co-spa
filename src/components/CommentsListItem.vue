@@ -14,13 +14,10 @@
         props: ['title', 'body', 'id'],
         methods: {
             get(e) {
+                store.commit('getComment', {title: $(e.target).prev().prev().text(),
+                                            text: $(e.target).prev().text(),
+                                            id: $(e.target).next().text()});
                 store.commit('changeComponent', 'Comment');
-                if (typeof(Storage) !== "undefined") {
-                    sessionStorage.title = $(e.target).prev().prev().text();
-                    sessionStorage.comment = $(e.target).prev().text();
-                    sessionStorage.id = $(e.target).next().text();
-                }
-                else $('.comment__title').append('Your browser does not support storage')
             }
         }
     }

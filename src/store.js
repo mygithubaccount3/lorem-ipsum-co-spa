@@ -1,7 +1,8 @@
 const store = new Vuex.Store({
     state: {
         component: 'Greeting',
-        list: []
+        list: [],
+        comment: {}
     },
     mutations: {
         add (state, payload) {
@@ -16,6 +17,9 @@ const store = new Vuex.Store({
         changeComponent(state, payload) {
             state.component = payload;
             window.scrollTo(0, 0);
+        },
+        getComment(state, payload) {
+            state.comment = payload
         }
     }
 });
